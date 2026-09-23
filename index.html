@@ -342,7 +342,7 @@
         </div>
 
         <!-- Golden / Orange Join Button -->
-        <a id="telegramLink" href="https://t.me/+BiiloqKsEgo0OWRl" class="cta-btn" onclick="trackButtonClick()">
+        <a id="telegramLink" href="https://t.me/+BiiloqKsEgo0OWRl" class="cta-btn" onclick="trackButtonClick(event)">
             JOIN TELEGRAM CHANNEL
         </a>
 
@@ -382,24 +382,30 @@
             }
             if (timeLeft <= 0) {
                 clearInterval(countdownTimer);
+                if (typeof fbq !== 'undefined') {
+                    fbq('trackCustom', 'AutoRedirect');
+                }
                 window.location.href = telegramUrl;
             }
         }, 1000);
 
-        function trackButtonClick() {
+        function trackButtonClick(event) {
+            if (event) event.preventDefault(); // Browser redirect ko rorakar Pixel fire hone ka time deta hai
+
             if (!isClicked) {
                 isClicked = true; 
 
-                // Facebook Pixel Tracking
+                // Facebook Pixel Events
                 if (typeof fbq !== 'undefined') {
                     fbq('trackCustom', 'TelegramBtnClick'); 
                     fbq('track', 'Subscribe'); 
+                    fbq('track', 'Lead'); 
                 }
 
-                // Redirect
+                // 400ms delay to make sure pixel event sends cleanly
                 setTimeout(function() {
                     window.location.href = telegramUrl;
-                }, 300);
+                }, 400);
             }
         }
     </script>
