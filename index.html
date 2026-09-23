@@ -1,49 +1,11 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="mr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRADE WITH GAUTAM JHA™ - Official Educational Community</title>
-    
-    <!-- Tailwind CSS Engine -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cyberDark: '#070a13',
-                        glassBg: 'rgba(15, 23, 42, 0.75)',
-                        neonCyan: '#00f2fe',
-                        neonPurple: '#7f53ac',
-                        neonBlue: '#4facfe'
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'glow': 'glow 3s ease-in-out infinite alternate',
-                        'float': 'float 6s ease-in-out infinite'
-                    },
-                    keyframes: {
-                        glow: {
-                            '0%': { boxShadow: '0 0 15px rgba(0, 242, 254, 0.3)' },
-                            '100%': { boxShadow: '0 0 35px rgba(127, 83, 172, 0.6)' }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-8px)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Abhi Trader - Share Market Education Maharashtra</title>
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- ========================================== -->
-    <!-- META PIXEL & TRACKING CODE -->
-    <!-- ========================================== -->
+    <!-- META PIXEL TRACKING CODE -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -54,285 +16,393 @@
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       
-      // Facebook Pixel ID Initialization
       fbq('init', '1423118243110920'); 
-      
-      // Standard PageView Event
       fbq('track', 'PageView');
     </script>
     <noscript>
       <img height="1" width="1" style="display:none"
            src="https://www.facebook.com/tr?id=1423118243110920&ev=PageView&noscript=1"/>
     </noscript>
-    <!-- ========================================== -->
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #070a13;
-            background-image: 
-                radial-gradient(at 10% 20%, rgba(0, 242, 254, 0.12) 0px, transparent 50%),
-                radial-gradient(at 90% 80%, rgba(127, 83, 172, 0.15) 0px, transparent 50%),
-                radial-gradient(at 50% 50%, rgba(15, 23, 42, 0.9) 0px, transparent 100%);
-            background-attachment: fixed;
+            background-color: #0b1120;
+            background-image: radial-gradient(circle at 50% 20%, #1e293b 0%, #0b1120 70%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px 10px;
         }
 
-        .cyber-grid {
-            background-size: 40px 40px;
-            background-image: 
-                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        .main-card {
+            width: 100%;
+            max-width: 410px;
+            text-align: center;
+            padding: 10px 5px;
         }
 
-        .glass-card {
-            background: rgba(13, 20, 36, 0.7);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(0, 242, 254, 0.25);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        /* Top Badge */
+        .top-badge-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
         }
 
-        .glowing-btn {
-            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #7f53ac 100%);
-            background-size: 200% auto;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        .top-badge {
+            background: rgba(14, 165, 233, 0.15);
+            border: 1px solid #0284c7;
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #38bdf8;
         }
 
-        .glowing-btn:hover {
-            background-position: right center;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.6);
+        /* Profile Section */
+        .profile-wrapper {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 16px auto;
         }
 
-        .badge-glow {
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+        .profile-img-box {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid #f59e0b;
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.5);
+            overflow: hidden;
+            background-color: #1e293b;
+        }
+
+        .profile-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Title & Subtitle */
+        .profile-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #f59e0b;
+            margin-bottom: 4px;
+        }
+
+        .profile-title span {
+            color: #38bdf8;
+        }
+
+        .profile-tagline {
+            font-size: 12px;
+            color: #94a3b8;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+
+        /* 3 Pill Row */
+        .pill-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .pill-item {
+            flex: 1;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 8px 4px;
+        }
+
+        .pill-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #38bdf8;
+        }
+
+        .pill-sub {
+            font-size: 10px;
+            color: #94a3b8;
+            margin-top: 2px;
+        }
+
+        /* Dark Option Cards (Stacked) */
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .option-card {
+            background: #131c31;
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            padding: 12px 14px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .option-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .option-sub {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 3px;
+        }
+
+        /* Highlight Featured Box */
+        .featured-box {
+            background: rgba(14, 165, 233, 0.08);
+            border: 1px solid #0284c7;
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+
+        .featured-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: #38bdf8;
+            margin-bottom: 4px;
+        }
+
+        .featured-desc {
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+
+        .featured-sub {
+            font-size: 11px;
+            color: #22c55e;
+            font-weight: 700;
+            margin-top: 3px;
+        }
+
+        /* Countdown Timer */
+        .timer-text {
+            font-size: 16px;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 12px;
+        }
+
+        /* Big Golden/Orange Button */
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 900;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 30px;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+
+        .cta-btn:active {
+            transform: scale(0.97);
+        }
+
+        .cta-note {
+            font-size: 11px;
+            color: #facc15;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        .disclaimer-sec {
+            font-size: 10px;
+            color: #64748b;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            font-size: 10px;
+            color: #475569;
+            border-top: 1px solid #1e293b;
+            padding-top: 10px;
+        }
+
+        .footer-links a {
+            color: #64748b;
+            text-decoration: underline;
+        }
+
+        .powered-by {
+            margin-top: 8px;
+            color: #64748b;
+        }
+
+        .agency-name {
+            color: #38bdf8;
+            font-weight: 700;
+            text-decoration: none;
         }
     </style>
 </head>
-<body class="cyber-grid min-h-screen text-slate-100 flex flex-col justify-center items-center p-3 md:p-6 relative overflow-x-hidden select-none">
+<body>
 
-    <div class="fixed -top-24 -left-24 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="fixed -bottom-24 -right-24 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
-
-    <!-- Main Container Card -->
-    <main class="w-full max-w-md glass-card rounded-3xl p-5 sm:p-6 relative z-10 my-auto animate-float">
+    <div class="main-card">
         
-        <!-- Top Live Status Bar -->
-        <div class="flex items-center justify-between bg-slate-900/80 border border-slate-800 rounded-full px-3.5 py-1.5 mb-5 text-xs">
-            <div class="flex items-center gap-2">
-                <span class="relative flex h-2.5 w-2.5">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </span>
-                <span class="text-emerald-400 font-semibold tracking-wide uppercase text-[10px]">Live Session Active</span>
-            </div>
-            <div class="text-slate-400 font-medium text-[11px] flex items-center gap-1">
-                <i class="fa-solid fa-users text-cyan-400"></i>
-                <span id="memberCount">18,492</span> Members
+        <!-- Top Badge -->
+        <div class="top-badge-container">
+            <div class="top-badge">
+                📊 अभी ट्रेडर मराठी 🇮🇳 महाराष्ट्र
             </div>
         </div>
 
-        <!-- Profile Section -->
-        <div class="flex flex-col items-center text-center mb-5">
-            <div class="relative mb-3">
-                <div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-600 badge-glow">
-                    <div class="w-full h-full rounded-full overflow-hidden bg-slate-950">
-                        <img src="profile.png" 
-                             alt="Gautam Jha Profile" 
-                             class="w-full h-full object-cover"
-                             onerror="this.onerror=null; this.src='https://placehold.co/200x200/0f172a/00f2fe?text=Gautam+Jha';">
-                    </div>
-                </div>
-                <!-- Verified Badge Icon -->
-                <div class="absolute bottom-0 right-1 bg-cyan-400 text-slate-950 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border-2 border-slate-900 shadow-md" title="Verified Trader">
-                    <i class="fa-solid fa-check"></i>
-                </div>
-            </div>
-
-            <!-- Title & Subtitle -->
-            <h1 class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-cyan-400 uppercase">
-                Trade With Mohit Agarwal 
-<span class="text-xs text-cyan-400 align-top"></span>
-            </h1>
-            <p class="text-xs text-slate-400 mt-1 font-medium tracking-wide">
-                Stock Market Education & Technical Analysis Hub
-            </p>
-        </div>
-
-        <!-- Educational Highlights List -->
-        <div class="space-y-2.5 mb-6">
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-cyan-500/40 transition-colors">
-                <div class="w-9 h-9 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center shrink-0 text-base">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-                <div class="text-left">
-                    <div class="text-xs font-bold text-slate-100">Learning & Educational Sessions</div>
-                    <div class="text-[11px] text-slate-400">Step-by-step stock market fundamentals</div>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-cyan-500/40 transition-colors">
-                <div class="w-9 h-9 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 text-base">
-                    <i class="fa-solid fa-chart-line"></i>
-                </div>
-                <div class="text-left">
-                    <div class="text-xs font-bold text-slate-100">Market Concepts & Awareness</div>
-                    <div class="text-[11px] text-slate-400">Master price action & risk management</div>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-cyan-500/40 transition-colors">
-                <div class="w-9 h-9 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0 text-base">
-                    <i class="fa-solid fa-gem"></i>
-                </div>
-                <div class="text-left">
-                    <div class="text-xs font-bold text-slate-100">Chart Reading Concepts</div>
-                    <div class="text-[11px] text-slate-400">In-depth candlestick pattern breakdowns</div>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-cyan-500/40 transition-colors">
-                <div class="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-base">
-                    <i class="fa-solid fa-laptop-code"></i>
-                </div>
-                <div class="text-left">
-                    <div class="text-xs font-bold text-slate-100">Educational Case Discussions</div>
-                    <div class="text-[11px] text-slate-400">Real-time historical chart analysis</div>
-                </div>
+        <!-- Golden Border Profile Image -->
+        <div class="profile-wrapper">
+            <div class="profile-img-box">
+                <img src="profile.png" alt="Abhi Trader">
             </div>
         </div>
 
-        <!-- High-Converting CTA Button -->
-        <div class="relative mb-5">
-            <button id="telegramLink" 
-                    onclick="trackButtonClick()" 
-                    class="glowing-btn w-full py-4 px-6 rounded-2xl text-slate-950 font-black text-lg tracking-wider uppercase flex items-center justify-center gap-3 shadow-xl transform active:scale-95 transition-all cursor-pointer">
-                <i class="fa-brands fa-telegram text-2xl"></i>
-                <span>JOIN TELEGRAM NOW</span>
-            </button>
-            <p class="text-[10px] text-center text-slate-400 mt-2 flex items-center justify-center gap-1">
-                <i class="fa-solid fa-shield-halved text-cyan-400"></i> Free Educational Access • No Fees
-            </p>
+        <!-- Title Header -->
+        <div class="profile-title">
+            👑 Abhi Trader <span>((अभी ट्रेडर))</span>
+        </div>
+        <div class="profile-tagline">
+            SHARE MARKET EDUCATION • MAHARASHTRA
         </div>
 
-        <!-- Hindi Quote Card -->
-        <div class="p-3.5 rounded-2xl bg-gradient-to-r from-slate-900/90 via-slate-800/60 to-slate-900/90 border border-cyan-500/20 text-center mb-4">
-            <i class="fa-solid fa-quote-left text-cyan-400/40 text-xs mb-1 block"></i>
-            <p class="text-xs font-semibold text-cyan-100 leading-relaxed italic">
-                "नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।"
-            </p>
-        </div>
-
-        <!-- Agency Tag -->
-        <div class="text-center py-2 px-3 rounded-xl bg-slate-900/40 border border-slate-800 text-slate-400 text-[11px] mb-4">
-            Promoted by 
-            <a href="https://t.me/+mp524qElHEQ2YWU1" target="_blank" rel="noopener" class="text-cyan-400 font-bold hover:underline inline-flex items-center gap-1">
-                ELITE MARKETING AGENCY <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-            </a>
-        </div>
-
-        <!-- Compliance Disclaimer Box -->
-        <div class="text-[10px] text-slate-400 leading-relaxed text-justify bg-slate-950/50 p-3 rounded-xl border border-slate-800/80 mb-4">
-            <span class="font-bold text-slate-300">Disclaimer:</span> Content shared on this platform is purely for educational & informational purposes. We are NOT SEBI registered advisors. We do not offer buy/sell recommendations, stock tips, or guaranteed financial returns. Stock market investments are subject to market risks. Please consult a SEBI registered financial advisor before trading.
-        </div>
-
-        <!-- Footer Links & Legal Trademarks -->
-        <footer class="text-center text-[10px] text-slate-500 space-y-2 border-t border-slate-800/60 pt-3">
-            <div class="flex justify-center items-center space-x-3 text-slate-400 font-medium">
-                <button onclick="toggleModal('privacyModal')" class="hover:text-cyan-400 transition-colors">Privacy Policy</button>
-                <span>•</span>
-                <button onclick="toggleModal('termsModal')" class="hover:text-cyan-400 transition-colors">Terms of Service</button>
-                <span>•</span>
-                <button onclick="toggleModal('disclaimerModal')" class="hover:text-cyan-400 transition-colors">Disclaimer</button>
+        <!-- 3 Feature Pills -->
+        <div class="pill-bar">
+            <div class="pill-item">
+                <div class="pill-title">मोफत</div>
+                <div class="pill-sub">Free</div>
             </div>
-            <p class="leading-normal px-2 text-[9px]">
-                This site is not a part of the Facebook™ website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of META PLATFORMS, INC.
-            </p>
-        </footer>
-
-    </main>
-
-    <!-- Modal Template for Terms & Privacy -->
-    <div id="privacyModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-sm w-full p-5 text-left text-xs text-slate-300 space-y-3 shadow-2xl">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                <h3 class="font-bold text-sm text-cyan-400">Privacy Policy</h3>
-                <button onclick="toggleModal('privacyModal')" class="text-slate-400 hover:text-white text-base"><i class="fa-solid fa-xmark"></i></button>
+            <div class="pill-item">
+                <div class="pill-title">रोज</div>
+                <div class="pill-sub">Daily</div>
             </div>
-            <p class="leading-relaxed">We respect your privacy. We do not sell or store personal info without consent. Meta Pixel tracks basic conversion statistics to optimize ad efficiency.</p>
+            <div class="pill-item">
+                <div class="pill-title">मराठी</div>
+                <div class="pill-sub">+ Hindi</div>
+            </div>
         </div>
+
+        <!-- Content Option Cards Stacked -->
+        <div class="card-list">
+            <div class="option-card">
+                <div class="option-title">🤝 💎 Share Market Basic Knowledge 💎</div>
+                <div class="option-sub">Stocks, indices, market concepts — zero se explained</div>
+            </div>
+
+            <div class="option-card">
+                <div class="option-title">🤝 💎 Nifty & BankNifty Education 💎</div>
+                <div class="option-sub">Daily market educational breakdown — free</div>
+            </div>
+
+            <div class="option-card">
+                <div class="option-title">📚 100% FIX EDUCATIONAL CONTENT</div>
+                <div class="option-sub">Chart & Candlestick patterns simply explained</div>
+            </div>
+        </div>
+
+        <!-- Highlight Box -->
+        <div class="featured-box">
+            <div class="featured-title">100% Educational Content</div>
+            <div class="featured-desc">Share market basics, chart analysis aur concepts — मराठीत free mein.</div>
+            <div class="featured-sub">गुंतवणुकीचा सल्ला नाही — केवळ शिक्षण</div>
+        </div>
+
+        <!-- Redirecting Timer Text -->
+        <div class="timer-text">
+            Redirecting in <span id="countdown">30</span>...
+        </div>
+
+        <!-- Golden / Orange Join Button -->
+        <a id="telegramLink" href="https://t.me/+BiiloqKsEgo0OWRl" class="cta-btn" onclick="trackButtonClick()">
+            JOIN TELEGRAM CHANNEL
+        </a>
+
+        <div class="cta-note">
+            ⚠️ Button dabane ke baad Telegram app me "Request to Join" zaroor karein.
+        </div>
+
+        <!-- Disclaimers & Footer -->
+        <div class="disclaimer-sec">
+            <strong>केवळ शैक्षणिक उद्देशासाठी. गुंतवणुकीचा सल्ला नाही.</strong><br>
+            For educational purposes only. Not investment advice. Investments in securities market are subject to market risks.
+        </div>
+
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a> | <a href="#disclaimer">Disclaimer</a><br>
+            This site is not a part of Facebook™ or Meta Platforms, Inc.
+            
+            <div class="powered-by">
+                Powered by <a href="https://t.me/+mp524qElHEQ2YWU1" target="_blank" rel="noopener noreferrer" class="agency-name">ELITE MARKETING AGENCY</a>
+            </div>
+        </div>
+
     </div>
 
-    <div id="termsModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-sm w-full p-5 text-left text-xs text-slate-300 space-y-3 shadow-2xl">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                <h3 class="font-bold text-sm text-cyan-400">Terms of Service</h3>
-                <button onclick="toggleModal('termsModal')" class="text-slate-400 hover:text-white text-base"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <p class="leading-relaxed">By joining our educational channels, you agree that all discussions are intended strictly for learning purposes. No commercial guarantees are provided.</p>
-        </div>
-    </div>
-
-    <div id="disclaimerModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-sm w-full p-5 text-left text-xs text-slate-300 space-y-3 shadow-2xl">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                <h3 class="font-bold text-sm text-cyan-400">Full Disclaimer</h3>
-                <button onclick="toggleModal('disclaimerModal')" class="text-slate-400 hover:text-white text-base"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <p class="leading-relaxed">Trading financial instruments carries high risks. Always calculate risk-reward ratios and perform independent research prior to taking market positions.</p>
-        </div>
-    </div>
-
-    <!-- JavaScript - Tracking Logic & Security against Fake Double-Clicks -->
+    <!-- Timer Countdown & Redirect Script -->
     <script>
-        // Track variable to ensure single-click lead capture
+        var timeLeft = 30;
+        var timerElement = document.getElementById('countdown');
+        var telegramUrl = "https://t.me/+BiiloqKsEgo0OWRl";
         var isClicked = false;
-        var telegramUrl = "https://t.me/+WeOTEndTTRtkMDRl";
+
+        // Auto Countdown Timer
+        var countdownTimer = setInterval(function() {
+            timeLeft--;
+            if (timerElement) {
+                timerElement.textContent = timeLeft;
+            }
+            if (timeLeft <= 0) {
+                clearInterval(countdownTimer);
+                window.location.href = telegramUrl;
+            }
+        }, 1000);
 
         function trackButtonClick() {
-            // First time click execution check
             if (!isClicked) {
-                isClicked = true;
+                isClicked = true; 
 
-                // 1. Fire Meta Pixel Conversion Events
+                // Facebook Pixel Tracking
                 if (typeof fbq !== 'undefined') {
                     fbq('trackCustom', 'TelegramBtnClick'); 
                     fbq('track', 'Subscribe'); 
-                    fbq('track', 'Lead'); 
                 }
 
-                // 2. Visually disable button to avoid duplicate triggers / fake click issues
-                var btn = document.getElementById('telegramLink');
-                if (btn) {
-                    btn.style.pointerEvents = 'none'; // Block secondary clicks entirely
-                    btn.style.opacity = '0.65';       // Subtle muted dimming effect
-                    btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin text-xl"></i><span>CONNECTING...</span>';
-                }
-
-                // 3. Smooth redirection after 300ms delay for reliable pixel event delivery
+                // Redirect
                 setTimeout(function() {
                     window.location.href = telegramUrl;
                 }, 300);
             }
         }
-
-        // Toggle modal helper
-        function toggleModal(modalId) {
-            var modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.toggle('hidden');
-            }
-        }
-
-        // Slight live dynamic simulation for active member count
-        setInterval(function() {
-            var countEl = document.getElementById('memberCount');
-            if (countEl && Math.random() > 0.6) {
-                var current = parseInt(countEl.innerText.replace(',', ''));
-                countEl.innerText = (current + Math.floor(Math.random() * 3) + 1).toLocaleString();
-            }
-        }, 4000);
     </script>
+
 </body>
 </html>
